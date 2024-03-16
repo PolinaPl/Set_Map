@@ -5,13 +5,13 @@ public class Main {
     private static final List<String> strings = new ArrayList<>(List.of("один", "два", "два", "три", "три", "три"));
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        System.out.println("Задание 1");
         task1(nums);
-        System.out.println();
+        System.out.println("Задание 2");
         task2(nums);
-        System.out.println();
+        System.out.println("Задание 3");
         task3(strings);
-        System.out.println();
+        System.out.println("Задание 4");
         task4(strings);
     }
 
@@ -25,22 +25,18 @@ public class Main {
 
     private static void task2(List<Integer> nums) {
         nums = new ArrayList<>(new HashSet<>(nums));
-        Collections.sort(nums);   // сортировка в порядке возрастания
+        Collections.sort(nums);
         for (int num : nums) {
             if (num % 2 == 0) {
                 System.out.println(num);
             }
         }
     }
-    // вместо 22, 23  - Set <Integer> sort = new TreeSet <> (nums) хранит по порядку
 
     private static void task3(List<String> words) {
         Set<String> uniqueWords = new HashSet<>(words);
         System.out.println(uniqueWords);
     }
-    //Напишите код, который выводит в консоль количество дублей для
-    // каждого уникального слова. Код должен работать с любой последовательностью и объемом списка слов.
-
 
     private static void task4(List<String> words) {
         Map<String, Integer> wordsMap = new HashMap<>();
@@ -52,6 +48,5 @@ public class Main {
             }
         }
         System.out.println(wordsMap);
-
     }
 }
